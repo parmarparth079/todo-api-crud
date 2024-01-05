@@ -1,0 +1,27 @@
+<div align="center">
+<form #myForm="ngForm" (ngSubmit)="myFormData(myForm)">
+
+    Name : <input type="text" #txt1="ngModel" ngModel name="txt1" required/>
+    <span *ngIf="txt1.invalid && txt1.touched" style="color: red;">**Enter Name</span>
+<br><br>
+
+    Gender : <input type="radio" #txt3="ngModel" ngModel name="txt3" value="male" required/> male 
+    <input type="radio" #txt3="ngModel" ngModel name="txt3" value="female" required/> female
+    <span *ngIf="txt3 .invalid && txt3.touched" style="color: red;">**Enter Gender</span>
+<br><br>
+
+    Email: <input type="text" #txt2="ngModel" ngModel name="txt2" required/>
+    <span *ngIf="txt2.invalid && txt2.touched" style="color: red;">**Enter Email</span>
+<br><br>
+
+    Mobile : <input type="text" #txt4="ngModel" ngModel name="txt4" required/>
+    <span *ngIf="txt4.invalid && txt4.touched" style="color: red;">**Enter your number</span>
+<br><br>
+
+    Passwword : <input type="number"#txt4="ngModel" ngModel name="txt4" required/>
+    <span *ngIf="txt4.invalid && txt4.touched" style="color: red;">** Enter your number</span>
+<br><br>
+
+<button [disabled]="myForm.invalid">Submit</button>
+</form>
+</div>  

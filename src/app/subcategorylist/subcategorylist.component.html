@@ -1,0 +1,14 @@
+<div align="center">
+<table>
+    <tr>    
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mobile</th>   
+    </tr>
+    <tr *ngFor="let userdata of myarray.sub_category_list">
+        <td>{{userdata.sub_category_id}}</td>
+        <td>{{userdata.sub_category_name}}</td>
+        <td><img src="{{userdata.sub_category_image}}" height="60px" width="60px"></td>
+    </tr>
+</table>
+</div>
